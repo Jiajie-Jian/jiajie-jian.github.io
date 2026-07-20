@@ -2,7 +2,7 @@ import * as pdfjsLib from "./assets/vendor/pdfjs/pdf.mjs";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "./assets/vendor/pdfjs/pdf.worker.mjs";
 
-const PDF_URL = "./files/Jiajie_Jian_CV.pdf?v=42b9be4c";
+const PDF_URL = "./files/Jiajie_Jian_CV.pdf?v=f62020e4";
 const MAX_PAGE_WIDTH = 850;
 const viewer = document.getElementById("cv-viewer");
 const status = document.getElementById("cv-status");

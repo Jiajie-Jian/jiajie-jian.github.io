@@ -15,7 +15,7 @@ window.SITE_DATA = {
     affiliation: "Chongqing University",
     location: "Chongqing, China",
     email: "jiajiejian02@gmail.com",
-    availability: "Open to research conversations and collaborations.",
+    availability: "Enjoying the journey of learning, research, and discovery.",
     photo: "assets/jace-or-jian-city-profile.png",
     photoAlt: "Professional headshot of Jiajie Jian",
     cv: "cv.html?v=6",
@@ -140,7 +140,6 @@ window.SITE_DATA = {
         title: "Cross-Boundary Covert UAV Service Near No-Fly Zones: Risk-Aware Trajectory and Scheduling",
         authors: "Jiajie Jian, Zan Li, Shu Fu, Jiangbo Si, and Min Liu",
         description: "A risk-aware trajectory and scheduling framework that balances UAV service quality with instantaneous RF exposure near regulated areas.",
-        manuscriptNote: "Full manuscript available upon reasonable request.",
         abstract: "Covert unmanned aerial vehicle (UAV) communications have attracted increasing attention as a key enabler for surveillance-sensitive aerial networks. In practical aerial service, however, covertness is often constrained not only by wireless detection but also by airspace restrictions. This constraint becomes particularly critical when the intended users are located inside protected regions that the UAV is not permitted to enter. It gives rise to a cross-boundary service scenario near no-fly zones (NFZs), where a UAV must remain outside the restricted airspace while covertly delivering data to ground users inside it under persistent surveillance. This paper studies joint trajectory planning, user scheduling, and rate control for this constrained mobile service system. We formulate an optimization problem that jointly accounts for convex-corridor-based NFZ avoidance, communication reliability, power limits, and a probabilistic covertness constraint. By exactly reformulating this probabilistic requirement into a deterministic cumulative covert-risk budget, we obtain a tractable risk-aware scheduling framework. We further characterize the impact of large-scale uncertainty and show that, in the low-power regime, larger uncertainty can worsen covertness. To solve the resulting nonconvex problem, we develop a two-stage algorithm that explores distinct topological bypass routes, updates scheduling via Lagrangian relaxation, and refines the trajectory and rate variables through corridor-constrained successive convex approximation. Simulation results demonstrate fast convergence and show that the proposed design substantially improves covert service efficiency over benchmark schemes while revealing interpretable risk-aware scheduling patterns under different mission durations.",
         figures: [
           {
@@ -162,7 +161,6 @@ window.SITE_DATA = {
         title: "Resilient Beamforming for Anti-Jamming MIMO-ISAC",
         authors: "Jiajie Jian, Shu Fu, Tingting Chen, and Min Liu",
         description: "A sensing-guided beamforming framework for unknown jamming, with low-dimensional optimization and lightweight learning-based online adaptation.",
-        manuscriptNote: "Full manuscript available upon reasonable request.",
         abstract: "Integrated sensing and communication (ISAC) achieves high spectral efficiency by executing target tracking and user communication via one unified waveform. However, this critical dual-role architecture makes it a lucrative target for jammers seeking to inflict maximum disruption with a single attack. To defend against such threats, we propose a resilient beamforming framework for multiple-input multiple-output (MIMO) ISAC systems. Lacking exact jammer knowledge, the base station constructs a surrogate spatial interference model from extracted features. A rank-constrained sensing covariance is jointly designed with the radar combiner to balance target illumination, clutter shaping, and jammer leakage. Transceivers are optimized via alternating fractional programming, utilizing a dual method that reduces high-dimensional matrix optimization to an efficient low-dimensional search. To stress-test this defense, we formulate a reactive jammer that adapts its spatial attack via projected gradient descent (PGD). Simulations verify that the proposed resilient design maintains high effective sum-rate and sensing ability under adaptive attacks.",
         figures: [
           {

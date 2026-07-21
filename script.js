@@ -45,8 +45,6 @@
     document.querySelectorAll("[data-short-name]").forEach((node) => (node.textContent = profile.shortName));
     document.querySelectorAll("[data-initials]").forEach((node) => (node.textContent = profile.initials));
     document.getElementById("profile-name").textContent = profile.name;
-    document.getElementById("profile-role").textContent = profile.role;
-    document.getElementById("profile-affiliation").textContent = profile.affiliation;
     document.querySelector(".sidebar-note").textContent = profile.availability;
 
     const photo = document.getElementById("profile-photo");
@@ -162,13 +160,32 @@
   const renderPublications = (root) => {
     const section = makeSection("publications", data.publications.eyebrow, data.publications.title);
     const list = el("div", "publication-list");
+
+    const authorLine = (authors) => {
+      const line = el("p", "publication-authors");
+      const selfName = data.profile.name;
+      const selfIndex = authors.indexOf(selfName);
+
+      if (selfIndex === -1) {
+        line.textContent = authors;
+        return line;
+      }
+
+      line.append(
+        document.createTextNode(authors.slice(0, selfIndex)),
+        el("strong", "publication-author-self", selfName),
+        document.createTextNode(authors.slice(selfIndex + selfName.length)),
+      );
+      return line;
+    };
+
     data.publications.items.forEach((item) => {
       const article = el("article", `publication${item.featured ? " publication-featured" : ""}`);
       const meta = el("div", "publication-meta");
       meta.append(el("span", "publication-year", item.year), el("span", "publication-venue", item.venue));
       const body = el("div", "publication-body");
       if (item.featured) body.append(el("p", "featured-label", "Featured work"));
-      body.append(el("h3", "", item.title), el("p", "publication-authors", item.authors));
+      body.append(el("h3", "", item.title), authorLine(item.authors));
       if (item.description) body.append(el("p", "publication-description", item.description));
       if (item.supplementaryNote) body.append(el("p", "publication-supplementary", item.supplementaryNote));
       if (item.manuscriptNote) body.append(el("p", "publication-manuscript-note", item.manuscriptNote));

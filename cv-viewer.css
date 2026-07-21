@@ -1,20 +1,20 @@
 :root {
-  --palette-bg: #f7f6f2;
-  --palette-surface: #fcfbf8;
-  --palette-primary: #2d4c5e;
-  --palette-secondary: #5d6971;
-  --palette-accent: #527482;
-  --palette-highlight: #aa634a;
-  --palette-bg-rgb: 247 246 242;
-  --palette-surface-rgb: 252 251 248;
-  --palette-primary-rgb: 45 76 94;
-  --palette-accent-rgb: 82 116 130;
-  --palette-highlight-rgb: 170 99 74;
+  --palette-bg: #fdfdfc;
+  --palette-surface: #ffffff;
+  --palette-primary: #3f4549;
+  --palette-secondary: #596267;
+  --palette-accent: #224b8d;
+  --palette-highlight: #224b8d;
+  --palette-bg-rgb: 253 253 252;
+  --palette-surface-rgb: 255 255 255;
+  --palette-primary-rgb: 63 69 73;
+  --palette-accent-rgb: 34 75 141;
+  --palette-highlight-rgb: 34 75 141;
   --ink: var(--palette-primary);
   --muted: var(--palette-secondary);
   --link: var(--palette-accent);
-  --line: rgb(var(--palette-accent-rgb) / 25%);
-  --line-strong: rgb(var(--palette-accent-rgb) / 40%);
+  --line: #eef0f1;
+  --line-strong: #dfe2e3;
   --paper: var(--palette-bg);
   --surface: var(--palette-surface);
   --accent: var(--palette-accent);
@@ -224,13 +224,11 @@ a:focus-visible {
   }
 }
 
-/* Unified four-color system for the CV preview shell. */
+/* Neutral-first academic palette for the CV preview shell. */
 
 body {
   color: var(--palette-primary);
-  background:
-    radial-gradient(circle at 8% 4%, rgb(var(--palette-accent-rgb) / 4%), transparent 28rem),
-    var(--palette-bg);
+  background: var(--palette-bg);
 }
 
 body::before {

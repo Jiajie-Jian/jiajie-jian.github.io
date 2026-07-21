@@ -18,9 +18,9 @@ window.SITE_DATA = {
     availability: "Open to research conversations and collaborations.",
     photo: "assets/jace-or-jian-city-profile.png",
     photoAlt: "Professional headshot of Jiajie Jian",
-    cv: "cv.html?v=5",
+    cv: "cv.html?v=6",
     links: [
-      { label: "Curriculum Vitae", url: "cv.html?v=5" },
+      { label: "Curriculum Vitae", url: "cv.html?v=6" },
     ],
   },
 
@@ -32,7 +32,7 @@ window.SITE_DATA = {
     ],
     actions: [
       { label: "Copy email", kind: "copy-email", style: "primary" },
-      { label: "View CV", url: "cv.html?v=5", style: "secondary" },
+      { label: "View CV", url: "cv.html?v=6", style: "secondary" },
     ],
     interests: [
       "5G/6G Wireless Systems",
@@ -190,7 +190,7 @@ window.SITE_DATA = {
         period: "2026 - Present",
         status: "Ongoing work · Co-author · Manuscript and experiments in preparation",
         title: "Diffusion-Assisted EKF Tracking for UAV-ISAC Beam Alignment",
-        description: "A diffusion-assisted EKF combines historical UAV states with innovation-aware DDIM refinement to reduce nonlinear tracking drift and provide reliable state estimates for downstream beam alignment and beamforming.",
+        description: "A diffusion-assisted EKF combines historical UAV states with innovation-aware DDIM refinement to reduce nonlinear tracking drift, providing reliable state estimates that improve downstream beam alignment and beamforming.",
         figures: [
           {
             src: "assets/projects/diffusion-assisted-uav-isac-system.png",
@@ -207,6 +207,11 @@ window.SITE_DATA = {
             src: "assets/projects/uav-tracking-demo.gif",
             alt: "Animated comparison of EKF and diffusion-refined UAV tracking in top-down and altitude views",
             caption: "Animated 3D tracking demo",
+          },
+          {
+            src: "assets/projects/beam-alignment-vs-horizon.png",
+            alt: "Beam-alignment gain and outage probability versus prediction horizon for the proposed predictive tracker and EKF baseline",
+            caption: "Predictive beam-alignment gain improvement",
           },
         ],
       },

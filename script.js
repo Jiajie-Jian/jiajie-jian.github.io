@@ -432,18 +432,13 @@
       const scale = 1.75;
       const maxWidth = Math.min(720, window.innerWidth - viewportPadding * 2);
       const maxHeight = window.innerHeight - viewportPadding * 2;
-      const aspectRatio = image.naturalWidth / image.naturalHeight;
       const isPortrait = image.id === "profile-photo";
 
       let width;
       let height;
       if (isPortrait) {
-        width = Math.min(sourceRect.width * scale, maxWidth);
-        height = width / aspectRatio;
-        if (height > maxHeight) {
-          height = maxHeight;
-          width = height * aspectRatio;
-        }
+        width = Math.min(sourceRect.width * scale, maxWidth, maxHeight);
+        height = width;
       } else {
         width = Math.min(680, maxWidth);
         height = Math.min(400, maxHeight);
